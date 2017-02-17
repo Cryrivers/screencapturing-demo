@@ -1,0 +1,8 @@
+<select onchange={{action (action prepareSharing) value="target.value"}}>
+  {{#each _sources as |source|}}
+    <option value="{{source.id}}">{{source.name}}</option>
+  {{/each}}
+</select>
+{{#if _sharingURL}}
+  <video src="{{_sharingURL}}" autoplay></video>
+{{/if}}
